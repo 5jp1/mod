@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "modrinth-downloader",
+  "version": "${version}",
+  "name": "Modrinth Downloader",
+  "description": "Browse and download mods, resource packs, shaders, datapacks, and plugins directly from Modrinth without leaving Minecraft!",
+  "authors": ["ModrinthDownloader"],
+  "contact": {
+    "homepage": "https://modrinth.com"
+  },
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.modrinthdownloader.ModrinthDownloaderClient"
+    ]
+  },
+  "mixins": [
+    "modrinth-downloader.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.18.0",
+    "fabric-api": "*",
+    "minecraft": "26.1.x",
+    "java": ">=25"
+  }
+}
