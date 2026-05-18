@@ -1,13 +1,13 @@
 plugins {
-	id 'net.fabricmc.fabric-loom' version '1.6-SNAPSHOT'
-	id 'maven-publish'
+	id "net.fabricmc.fabric-loom" version "1.15.5"
+	id "maven-publish"
 }
 
-version = '1.0.0'
-group = 'com.modrinthdownloader'
+version = project.mod_version
+group = project.maven_group
 
 base {
-	archivesName = 'modrinth-downloader'
+	archivesName = project.archives_base_name
 }
 
 repositories {
@@ -15,10 +15,10 @@ repositories {
 }
 
 dependencies {
-	minecraft "com.mojang:minecraft:26.1.2"
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	mappings loom.officialMojangMappings()
-	modImplementation "net.fabricmc:fabric-loader:0.18.4"
-	modImplementation "net.fabricmc.fabric-api:fabric-api:0.116.0+26.1"
+	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 }
 
 processResources {
